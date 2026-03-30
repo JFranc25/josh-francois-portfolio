@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Routes, Route, useNavigate } from "react-router-dom";
+import profilePic from "./assets/profile.jpg";
 import ProjectPage from "./ProjectPage";
 import AboutPage from "./AboutPage";
 import ContactPage from "./ContactPage";
 
-import profilePic from "./assets/profile.jpg";
 
 const pageVariants = {
   initial: (direction) => ({
