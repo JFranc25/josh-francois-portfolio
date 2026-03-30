@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 // IMPORT YOUR IMAGES
-import profilePic from "/mnt/data/IMG_2482.JPG";
-import linkedinIcon from "/mnt/data/linkedin-logo-linkedin-icon-transparent-free-png.webp";
-import gmailIcon from "/mnt/data/Gmail_icon_(2020).svg.png";
+import profilePic from "./assets/profile.jpg";
+import linkedinIcon from "./assets/linkedin.png";
+import gmailIcon from "./assets/gmail.png";
 
 export default function AboutPage() {
   const navigate = useNavigate();

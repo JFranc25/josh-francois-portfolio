@@ -1,11 +1,17 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export default function ContactPage() {
   const navigate = useNavigate();
+  const [copied, setCopied] = useState(false);
 
   const copyEmail = () => {
     navigator.clipboard.writeText("josh.francois04@gmail.com");
-    alert("Email copied to clipboard!");
+    setCopied(true);
+
+    setTimeout(() => {
+      setCopied(false);
+    }, 2000);
   };
 
   return (
@@ -49,6 +55,9 @@ export default function ContactPage() {
             </div>
             <h3>Email</h3>
             <p>josh.francois04@gmail.com</p>
+
+            {/* 🔥 Copy Feedback */}
+            {copied && <span className="copy-msg">Copied!</span>}
           </div>
 
           {/* LINKEDIN */}

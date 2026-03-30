@@ -355,4 +355,10 @@ body {
   font-size: 28px;
   margin-bottom: 10px;
 }
+.copy-msg {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #1db954;
+}
 }
