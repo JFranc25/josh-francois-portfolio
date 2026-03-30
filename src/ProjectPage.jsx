@@ -1,11 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
-// 🔥 IMPORT YOUR IMAGES
-import ui from "../assets/playlist-ui.png";
-import filled from "../assets/playlist-filled.png";
-import csv from "../assets/csv-import.png";
-import output from "../assets/playlist-output.png";
 
 const projectData = {
   playlist: {
@@ -14,8 +9,12 @@ const projectData = {
     color: "#1db954",
 
     // ✅ REAL IMAGES
-    images: [ui, filled, csv, output],
-
+    images: [
+  "/playlist-ui.png",
+  "/playlist-filled.png",
+  "/csv-import.png",
+  "/playlist-output.png"
+],
     overview:
       "A Java desktop application that organizes music collections using data structures. Songs are automatically categorized by mood (BPM) and genre, with support for persistent storage and efficient retrieval.",
 
