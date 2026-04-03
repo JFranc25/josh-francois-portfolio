@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import bgImage from "../assets/Crowd.jpeg"; // adjust path if needed
+import bgImage from "../assets/crowd.jpeg"; // adjust path if needed
 
 export default function ContactPage() {
   const navigate = useNavigate();
