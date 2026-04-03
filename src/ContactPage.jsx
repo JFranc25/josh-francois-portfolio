@@ -14,7 +14,6 @@ export default function ContactPage() {
       setCopied(false);
     }, 2000);
   };
-
   return (
     <div
       className="contact-page"
