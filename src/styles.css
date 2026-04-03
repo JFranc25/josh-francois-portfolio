@@ -306,59 +306,114 @@ body {
 
 .section h2 {
   margin-bottom: 15px;
-  /* CONTACT PAGE */
+/* CONTACT PAGE */
 .contact-page {
+  position: relative;
+  min-height: 100vh;
   padding: 40px;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* 🔥 DARK OVERLAY */
+.contact-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  z-index: 0;
+}
+
+/* keep content above overlay */
+.contact-container,
+.back-btn {
+  position: relative;
+  z-index: 1;
 }
 
 .contact-container {
   max-width: 900px;
   margin: auto;
+  text-align: center;
 }
 
 .contact-title {
-  font-size: 36px;
+  font-size: 42px;
   margin-bottom: 10px;
+  letter-spacing: 1px;
 }
 
 .contact-sub {
   opacity: 0.7;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 /* GRID */
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  gap: 25px;
 }
 
 /* CARD */
 .contact-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
-  padding: 25px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 18px;
+  padding: 28px;
   text-decoration: none;
   color: white;
-  transition: 0.3s;
+  transition: all 0.35s ease;
+  backdrop-filter: blur(12px);
+  cursor: pointer;
 }
 
+/* 🔥 MAIN HOVER EFFECT */
 .contact-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  border: 1px solid #1db954;
-  box-shadow: 0 0 20px rgba(29,185,84,0.3);
+  transform: translateY(-8px) scale(1.05);
+  border: 1px solid #00ffcc;
+  box-shadow: 0 0 25px rgba(0, 255, 200, 0.6);
 }
 
 /* ICON */
 .contact-icon {
-  font-size: 28px;
-  margin-bottom: 10px;
+  font-size: 30px;
+  margin-bottom: 12px;
 }
+
+/* 🔥 ICON GLOW */
+.contact-icon svg {
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon svg {
+  filter: drop-shadow(0 0 12px #00ffcc);
+  transform: scale(1.1);
+}
+
+/* 🔥 COPY MESSAGE */
 .copy-msg {
   display: block;
   margin-top: 8px;
   font-size: 12px;
-  color: #1db954;
+  color: #00ffcc;
+  animation: fadeIn 0.3s ease;
+}
+
+/* 🔥 SMOOTH FADE */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 }
