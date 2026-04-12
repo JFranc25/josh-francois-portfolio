@@ -83,7 +83,6 @@ export default function ContactPage() {
             <h3>LinkedIn</h3>
             <p>linkedin.com/in/joshfrancois04</p>
           </a>
-
         </div>
       </div>
     </div>
