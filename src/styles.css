@@ -7,6 +7,12 @@ body {
   cursor: none;
 }
 
+/* 🔥 PREVENT OVERFLOW ISSUES */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* CURSOR */
 .cursor-dot {
   position: fixed;
@@ -71,16 +77,15 @@ body {
   overflow-y: auto;
 }
 
-/* GRID */
+/* 🔥 RESPONSIVE GRID (FIXED) */
 .grid {
-  display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
 
 /* CARDS */
 .card {
-  width: 220px;
   height: 180px;
   border-radius: 16px;
   overflow: hidden;
@@ -113,21 +118,6 @@ body {
   left: 10px;
 }
 
-/* ABOUT CARD */
-.about-card {
-  border: 1px solid rgba(29,185,84,0.3);
-}
-
-/* CONTACT CARD (HOME PAGE) */
-.contact-card {
-  border: 1px solid rgba(59,130,246,0.3);
-  background: linear-gradient(145deg, #0f172a, #020617);
-}
-
-.contact-card:hover {
-  box-shadow: 0 0 25px rgba(59,130,246,0.4);
-}
-
 /* PROFILE HERO */
 .profile-hero {
   display: flex;
@@ -141,13 +131,11 @@ body {
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  flex-shrink: 0;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
 }
 
+/* TEXT */
 .profile-info h1 {
   font-size: 42px;
-  margin: 5px 0;
 }
 
 .profile-label {
@@ -160,8 +148,14 @@ body {
   margin-bottom: 15px;
 }
 
+/* BUTTONS */
+.profile-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .profile-actions button {
-  margin-right: 10px;
   padding: 8px 16px;
   border-radius: 20px;
   border: none;
@@ -191,7 +185,6 @@ body {
   padding: 40px;
   background-size: cover;
   background-position: center;
-  color: white;
 }
 
 /* OVERLAY */
@@ -225,36 +218,30 @@ body {
   margin-bottom: 40px;
 }
 
+/* CONTACT GRID */
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
 }
 
-/* CONTACT CARDS (CONTACT PAGE) */
+/* CONTACT CARDS */
 .contact-page .contact-card {
   background: rgba(255,255,255,0.05);
   border-radius: 18px;
   padding: 28px;
-  text-decoration: none;
-  color: white;
-  transition: 0.3s;
   backdrop-filter: blur(12px);
 }
 
-.contact-page .contact-card:hover {
-  transform: translateY(-8px) scale(1.05);
-  box-shadow: 0 0 25px rgba(0,255,200,0.6);
+/* ICONS */
+.contact-icon {
+  width: 24px;
+  height: 24px;
 }
 
-.contact-icon svg {
-  width: 40px;
-  height: 40px;
-  transition: 0.3s;
-}
-
-.contact-page .contact-card:hover .contact-icon svg {
-  filter: drop-shadow(0 0 12px #00ffcc);
+.profile-img {
+  width: 100px;
+  height: 100px;
 }
 
 /* COPY MSG */
@@ -264,7 +251,7 @@ body {
   animation: fadeIn 0.3s ease;
 }
 
-/* KEYFRAMES (FIXED) */
+/* KEYFRAMES */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -275,12 +262,49 @@ body {
     transform: translateY(0);
   }
 }
-.profile-img {
-  width: 100px;
-  height: 100px;
-}
 
-.contact-icon {
-  width: 24px;
-  height: 24px;
+/* ========================= */
+/* 📱 MOBILE RESPONSIVENESS */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  /* STACK LAYOUT */
+  .app {
+    flex-direction: column;
+  }
+
+  /* SIDEBAR → TOP NAV */
+  .sidebar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  /* MAIN PADDING */
+  .main {
+    padding: 20px;
+  }
+
+  /* HERO STACK */
+  .profile-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* TEXT SIZE */
+  .profile-info h1 {
+    font-size: 28px;
+  }
+
+  /* CENTER BUTTONS */
+  .profile-actions {
+    justify-content: center;
+  }
+
+  /* CONTACT PAGE */
+  .contact-page {
+    padding: 20px;
+  }
+
 }
