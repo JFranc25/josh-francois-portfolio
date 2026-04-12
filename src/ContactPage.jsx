@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import bgImage from "../assets/crowd.jpeg"; // adjust path if needed
+
 
 export default function ContactPage() {
   const navigate = useNavigate();
@@ -15,14 +15,14 @@ export default function ContactPage() {
     }, 2000);
   };
   return (
-    <div
-      className="contact-page"
-      style={{
-        backgroundImage: `url(${bgImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+ <div
+  className="contact-page"
+  style={{
+    backgroundImage: "url('/Crowd.jpeg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
       {/* 🔥 DARK OVERLAY */}
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
 
