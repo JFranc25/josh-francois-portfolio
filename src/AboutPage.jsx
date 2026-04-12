@@ -2,10 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-// ✅ MAKE SURE THESE FILES EXIST EXACTLY (case-sensitive)
-import profilePic from "../assets/profile.jpg";
-import linkedinIcon from "../assets/linkedin.png";
-import gmailIcon from "../assets/gmail.png";
+
 
 export default function AboutPage() {
   const navigate = useNavigate();
@@ -30,7 +27,7 @@ export default function AboutPage() {
           ← Back
         </button>
 
-        <img src={profilePic} className="profile-img" alt="Profile" />
+        <img src="/profile.jpg" className="profile-img" />
 
         <div className="about-info">
           <h1>Joshua Francois</h1>
@@ -41,7 +38,7 @@ export default function AboutPage() {
 
             {/* EMAIL */}
             <div className="contact-card" onClick={copyEmail}>
-              <img src={gmailIcon} className="contact-icon" alt="Email" />
+              <img src="/gmail.png" className="contact-icon" />
               <div>
                 <p className="label">Email</p>
                 <p className="value">Josh.Francois04@gmail.com</p>
@@ -56,7 +53,7 @@ export default function AboutPage() {
               rel="noreferrer"
               className="contact-card"
             >
-              <img src={linkedinIcon} className="contact-icon" alt="LinkedIn" />
+              <img src="/linkedin.png" className="contact-icon" />
               <div>
                 <p className="label">LinkedIn</p>
                 <p className="value">joshfrancois04</p>
