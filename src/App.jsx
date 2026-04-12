@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import profilePic from "./assets/profile.jpg";
+
 import ProjectPage from "./ProjectPage";
 import AboutPage from "./AboutPage";
 import ContactPage from "./ContactPage";
@@ -133,7 +133,7 @@ export default function App() {
 
                     {/* HERO */}
                     <div className="profile-hero">
-                      <img src={profilePic} className="profile-pic" />
+                      <img src="/profile.jpg" className="profile-pic" />
 
                       <div className="profile-info">
                         <p className="profile-label">Developer</p>
