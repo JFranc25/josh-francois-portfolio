@@ -2,10 +2,10 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-// IMPORT YOUR IMAGES
-import profilePic from "./assets/profile.jpg";
-import linkedinIcon from "./assets/linkedin.png";
-import gmailIcon from "./assets/gmail.png";
+// ✅ MAKE SURE THESE FILES EXIST EXACTLY (case-sensitive)
+import profilePic from "../assets/profile.jpg";
+import linkedinIcon from "../assets/linkedin.png";
+import gmailIcon from "../assets/gmail.png";
 
 export default function AboutPage() {
   const navigate = useNavigate();
@@ -26,9 +26,11 @@ export default function AboutPage() {
 
       {/* HERO SECTION */}
       <div className="about-hero">
-        <button className="back-btn" onClick={() => navigate(-1)}>← Back</button>
+        <button className="back-btn" onClick={() => navigate(-1)}>
+          ← Back
+        </button>
 
-        <img src={profilePic} className="profile-img" />
+        <img src={profilePic} className="profile-img" alt="Profile" />
 
         <div className="about-info">
           <h1>Joshua Francois</h1>
@@ -37,8 +39,9 @@ export default function AboutPage() {
           {/* CONTACT */}
           <div className="contact-row">
 
+            {/* EMAIL */}
             <div className="contact-card" onClick={copyEmail}>
-              <img src={gmailIcon} className="contact-icon" />
+              <img src={gmailIcon} className="contact-icon" alt="Email" />
               <div>
                 <p className="label">Email</p>
                 <p className="value">Josh.Francois04@gmail.com</p>
@@ -46,12 +49,14 @@ export default function AboutPage() {
               {copied && <span className="copied">Copied</span>}
             </div>
 
+            {/* LINKEDIN */}
             <a
               href="https://www.linkedin.com/in/joshfrancois04/"
               target="_blank"
+              rel="noreferrer"
               className="contact-card"
             >
-              <img src={linkedinIcon} className="contact-icon" />
+              <img src={linkedinIcon} className="contact-icon" alt="LinkedIn" />
               <div>
                 <p className="label">LinkedIn</p>
                 <p className="value">joshfrancois04</p>
@@ -62,14 +67,14 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* BIO */}
+      {/* ABOUT */}
       <div className="about-section">
         <h2>About Me</h2>
         <p>
           I’m an Information Technology student at New York Institute of Technology with a strong
           foundation in building interactive applications and solving real-world problems through technology.
           I combine technical skills with customer-focused thinking, allowing me to design systems that are both
-          functional and user-friendly. :contentReference[oaicite:2]{index=2}
+          functional and user-friendly.
         </p>
 
         <p>
@@ -83,13 +88,12 @@ export default function AboutPage() {
         <h2>Project Experience</h2>
 
         <div className="project-highlight">
-
           <h3>Playlist Generator App 🎧</h3>
 
           <p>
             Designed and developed a Java-based playlist management system that automatically organizes music
             based on genre and energy levels. The application eliminates manual sorting by categorizing songs
-            using BPM and structured data logic. :contentReference[oaicite:3]{index=3}
+            using BPM and structured data logic.
           </p>
 
           <ul>
@@ -105,7 +109,6 @@ export default function AboutPage() {
             This project demonstrates strong understanding of Object-Oriented Programming,
             data structures, and building full applications with real functionality.
           </p>
-
         </div>
       </div>
 
