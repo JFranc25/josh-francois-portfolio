@@ -275,3 +275,12 @@ body {
     transform: translateY(0);
   }
 }
+.profile-img {
+  width: 100px;
+  height: 100px;
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+}
